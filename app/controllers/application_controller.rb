@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
     @tumblr = ''
     @instagram = ''
 
-    @newmessage = 'first release'
+    @newmessage = 'FIRST RELEASE'
 
   end
 
