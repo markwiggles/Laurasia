@@ -1,0 +1,159 @@
+@import "twitter/bootstrap/bootstrap";
+@import "theme/variables";
+
+@import "theme/mixins";
+
+
+// Set the correct sprite paths
+@iconSpritePath: image-url("twitter/bootstrap/glyphicons-halflings.png");
+@iconWhiteSpritePath: image-url("twitter/bootstrap/glyphicons-halflings-white.png");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+@fontAwesomeEotPath: font-url("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: font-url("fontawesome-webfont.eot?#iefix");
+@fontAwesomeWoffPath: font-url("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: font-url("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: font-url("fontawesome-webfont.svg#fontawesomeregular");
+
+// Font Awesome
+//@import "fontawesome/font-awesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/glyphicons.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @link-color: #ff0000;
+
+@image-bg: '/assets/laurasia.png';
+//'triangle240914.jpg';
+
+@bg-dark: 0.7;
+@bg-size: 20%;
+
+@font-face {
+  font-family: 'avangeli';
+  src: url('/assets/avangeli.ttf');
+}
+
+html {
+  .bg-light;
+  background-color: black;
+}
+
+.navbar {
+
+}
+
+.navbar-brand {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  margin: auto;
+}
+
+.navbar-brand {
+  letter-spacing: 0.05em;
+  .new !important;
+}
+
+#soundcloud-embed {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  padding: 0 100px;
+}
+.social-media a {
+  display: block;
+  padding: 5px;
+  color: lighten(@brand-primary, 20%);
+  &:hover {
+    opacity:0.8;
+  }
+}
+
+footer {
+  position: absolute;
+  top: 95%;
+}
+
+@media screen and (max-width: @screen-md) {
+  .artist-name {
+    font-size: 3em;
+  }
+
+  .new {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: @screen-sm) {
+  .artist-name {
+    font-size: 2em;
+  }
+
+  .new {
+    font-size: 1em;
+  }
+}
+
+.artist-name {
+  letter-spacing: 0.1em;
+  font-family: avangeli, arial, sans-serif;
+  text-align: right;
+}
+
+#heading {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  h1{
+    margin: 0;
+  }
+}
+
+.new {
+  font-family: "Interstate", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: lighten(@brand-primary,30%)
+}
+
+//BACKGROUNDS
+.bg-light {
+  background-image: url(@image-bg);
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  background-attachment: fixed;
+
+  /*Add the browser prefixed CSS first:*/
+  -webkit-background-size: @bg-size;
+  -moz-background-size: @bg-size;
+  -o-background-size: @bg-size;
+  background-size: @bg-size;
+}
+
+.bg-dark {
+  background: linear-gradient(rgba(0, 0, 0, @bg-dark), rgba(0, 0, 0, @bg-dark)), url(@image-bg);
+  background: -webkit-linear-gradient(rgba(0, 0, 0, @bg-dark), rgba(0, 0, 0, @bg-dark)), url(@image-bg);
+  background: -moz-linear-gradient(rgba(0, 0, 0, @bg-dark), rgba(0, 0, 0, @bg-dark)), url(@image-bg);
+  background: -o-linear-gradient(rgba(0, 0, 0, @bg-dark), rgba(0, 0, 0, @bg-dark)), url(@image-bg);
+
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  background-attachment: fixed;
+
+  /*Add the browser prefixed CSS first:*/
+  -webkit-background-size: @bg-size;
+  -moz-background-size: @bg-size;
+  -o-background-size: @bg-size;
+  background-size: @bg-size;
+}
